@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Add') {
             steps {
-                 sh ./add2.sh
+                 sh "./add2.sh"
                 
             }
         }
