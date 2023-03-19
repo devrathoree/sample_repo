@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Add') {
             steps {
-                 sh ./add2.sh
+                 sh https://github.com/devrathoree/sample_repo/blob/main/add2.sh
                 
             }
         }
