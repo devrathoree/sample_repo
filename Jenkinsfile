@@ -1,13 +1,19 @@
 pipeline {
-    agent any
-    stages {
-        stage('Add') {
-            steps {
-                 sh "chmod 777 add2.sh"
-                 sh "./add2.sh"
-                
-            } 
-        }
-    }
+   agent any
+   stages {
+       stage('Build Code') {
+           steps {
+               sh """
+               echo "Building Artifact from main"
+               """
+           }
+       }
+      stage('Deploy Code') {
+          steps {
+               sh """
+               echo "Deploying Code from main"
+               """
+          }
+      }
+   }
 }
-
